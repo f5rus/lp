@@ -77,3 +77,18 @@ doctrine_migrations:
     namespace: Application\Migrations
     table_name: migration_versions
     name: Application Migrations
+
+vich_uploader:
+    db_driver:  orm
+    twig:       true
+    storage:    file_system
+    mappings:
+        product_image:
+            uri_prefix:         web
+            upload_destination: ~
+            namer:              ~
+            directory_namer:    ~
+            delete_on_remove:   true
+            delete_on_update:   true
+            inject_on_load:     false
+            db_driver:          phpcr
