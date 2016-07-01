@@ -14,7 +14,7 @@ class UserController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      *
-     * @Route("/", name="dashboard")
+     * @Route("/", name="user_dashboard")
      */
     public function dashboardAction()
     {
