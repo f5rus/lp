@@ -83,9 +83,9 @@ vich_uploader:
     twig:       true
     storage:    file_system
     mappings:
-        product_image:
-            uri_prefix:         web
-            upload_destination: ~
+        image:
+            uri_prefix:         /uploads/images
+            upload_destination: %kernel.root_dir%/../web/uploads/images
             namer:              ~
             directory_namer:    ~
             delete_on_remove:   true
