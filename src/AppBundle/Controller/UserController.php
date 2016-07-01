@@ -4,17 +4,22 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
-class MainController extends Controller
+/**
+ * Class UserController
+ * @package AppBundle\Controller
+ */
+class UserController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @Route("/", name="dashboard")
      */
-    public function indexAction(Request $request)
+    public function dashboardAction()
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
+        return $this->render('main/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
