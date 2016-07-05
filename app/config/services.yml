@@ -4,10 +4,20 @@ parameters:
 #    parameter_name: value
 
 services:
-  security_helper:
-      class: AppBundle\Helper\SecurityHelper
-      arguments:
-        - '@security.authentication.manager'
-        - '@logger'
-        - '@security.token_storage'
-        - '%provider_key%'
+    ajax_authentication_failure_handler:
+        class: AppBundle\Handler\AjaxAuthenticationFailureHandler
+        public: false
+        arguments:
+            - '@http_kernel'
+            - '@security.http_utils'
+            - {}
+            - '@logger'
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }
+
+    ajax_authentication_success_handler:
+        class: AppBundle\Handler\AjaxAuthenticationSuccessHandler
+        public: false
+        arguments:
+            - '@security.http_utils'
+            - {}

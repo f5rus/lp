@@ -1,0 +1,33 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <div class="colwhite w-clearfix w-col w-col-6"><img class="top_logo" src="{{ asset('images/bildschirmfoto.png') }}">
+        <div class="logintxt">| {{ 'security.login.caption'|trans }}</div>
+        <div class="w-form wrapp">
+            <form class="login js-login-form" action="{{ path("fos_user_security_check") }}" method="post">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                <label class="fieldlabel" for="username">{{ 'security.login.username'|trans }}</label>
+                <input class="txt w-input" placeholder="{{ 'security.login.username_placeholder'|trans }}" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+                <label class="fieldlabel numb2" for="password">{{ 'security.login.password'|trans }}</label>
+                <input class="txt w-input" placeholder="{{ 'security.login.password_placeholder'|trans }}" type="password" id="password" name="_password" required="required" />
+
+                <input class="signin w-button" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                <a class="forget" href="forgot.html">{{ 'security.login.forgot_password'|trans  }}</a>
+            </form>
+
+            <div class="w-form-done js-success-note">
+                <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail js-fail-note">
+                <div>Oops! Something went wrong while submitting the form</div>
+            </div>
+        </div>
+    </div>
+{% endblock fos_user_content %}
+{% block javascripts %}
+    <script src="{{ asset('js/security.js') }}"></script>
+{% endblock %}

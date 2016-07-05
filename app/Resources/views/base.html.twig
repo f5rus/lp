@@ -38,7 +38,7 @@
                                 <div class="language">Deutsch | <strong>English</strong>
                                 </div>
                             </a>
-                            <nav class="w-nav-menu" role="navigation"><a class="navv w-nav-link" href="/create-user">Welcome, User</a><a class="logout navv w-nav-link" href="index.html">Logout</a>
+                            <nav class="w-nav-menu" role="navigation"><a class="navv w-nav-link" href="/create-user">Welcome, {{ app.user.username }}</a><a class="logout navv w-nav-link" href="{{ path('fos_user_security_logout') }}">Logout</a>
                             </nav>
                             <div class="w-nav-button">
                                 <div class="w-icon-nav-menu"></div>
