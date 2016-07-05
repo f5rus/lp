@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "jquery": "^3.0.0",
-    "dropzone": "^4.3.0"
+    "dropzone": "^4.3.0",
+    "normalize-css": "^4.2.0"
   }
 }

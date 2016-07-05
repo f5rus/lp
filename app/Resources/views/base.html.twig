@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]>         <html class="ie7 lt-ie9 lt-ie8" lang="de"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8 lt-ie9" lang="de"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="de"> <!--<![endif]-->
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Lapixa{% endblock %}</title>
+        <link href="{{ asset('components/normalize-css/normalize.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/lapixa-webflow.css') }}" rel="stylesheet" />
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Oswald:300,400,700"]
+                }
+            });
+        </script>
+        <script type="text/javascript" src="{{ asset('js/modernizr.js') }}"></script>
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.ico') }}">
     </head>
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
         {% block body %}{% endblock %}
+        <script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
+        {#<script src="{{ asset('js/webflow.js') }}"></script>#}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

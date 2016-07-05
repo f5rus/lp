@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+{% block body_class %}bodyy{% endblock %}
+{% block body %}
+    <div class="w-row">
+        <div class="w-col w-col-6"></div>
+        <div class="colwhite w-clearfix w-col w-col-6"><img class="top_logo" src="{{ asset('images/bildschirmfoto.png') }}">
+            <div class="logintxt">| Login to your account</div>
+            <div class="w-form wrapp">
+                {{ form_start(form) }}
+                    {{ form_label(form.username) }}
+                    {{ form_widget(form.username) }}
+                    {{ form_label(form.password) }}
+                    {{ form_widget(form.password) }}
+                    {{ form_widget(form.send) }}
+                    <a class="forget" href="forgot.html">Forgot Password?</a>
+                {{ form_end(form) }}
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}

@@ -4,6 +4,10 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  security_helper:
+      class: AppBundle\Helper\SecurityHelper
+      arguments:
+        - '@security.authentication.manager'
+        - '@logger'
+        - '@security.token_storage'
+        - '%provider_key%'
