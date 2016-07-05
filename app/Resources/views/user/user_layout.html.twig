@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block left_side %}
+    <div class="div_menu">
+        <div class="navi_header">Menu</div>
+        <a class="link_box w-clearfix w-inline-block" href="old-home.html"><img class="diagram" src="{{ asset('images/icon.svg') }}" width="18">
+            <div class="menu_link">Dashboard</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="image.html"><img class="diagram" src="{{ asset('images/gallery.svg') }}" width="18">
+            <div class="menu_link">Images</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="activitys.html"><img class="diagram" src="{{ asset('images/bell (2).svg') }}" width="18">
+            <div class="menu_link">Activity &nbsp; (3)</div>
+        </a>
+        <div class="navi_header">Events</div>
+        <a class="link_box w-clearfix w-inline-block" href="new-matches.html"><img class="diagram" src="{{ asset('images/pie-chart (1).svg') }}" width="18">
+            <div class="menu_link">New Matches &nbsp; (30)</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="illegal.html"><img class="diagram" src="{{ asset('images/pie-chart (4).svg') }}" width="18">
+            <div class="menu_link">Illegal &nbsp; (40)</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="legal.html"><img class="diagram" src="{{ asset('images/pie-chart.svg') }}" width="18">
+            <div class="menu_link">Legal &nbsp; (11)</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="failure.html"><img class="diagram" src="{{ asset('images/pie-chart (5).svg') }}" width="18">
+            <div class="menu_link">Failure &nbsp; (25)</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="user-calims.html"><img class="diagram" src="{{ asset('images/pie-chart (3).svg') }}" width="18">
+            <div class="menu_link">Claims &nbsp; (22)</div>
+        </a>
+        <div class="navi_header">Settings</div>
+        <a class="link_box w-clearfix w-inline-block" href="account.html"><img class="diagram" src="{{ asset('images/avatar (2).svg') }}" width="18">
+            <div class="menu_link">Account</div>
+        </a>
+        <a class="link_box w-clearfix w-inline-block" href="contact.html"><img class="diagram" src="{{ asset('images/phone-contact.svg') }}" width="18">
+            <div class="menu_link">Contact</div>
+        </a>
+    </div>
+{% endblock %}

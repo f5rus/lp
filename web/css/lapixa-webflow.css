@@ -1775,20 +1775,20 @@
 }
 
 .hmf {
-  background-image: url('../images/iStock_89629605_LARGE.jpg');
+  background-image: url('../images/iStock_large.jpg');
   background-position: 0px 0px;
   background-size: contain;
 }
 
 .imk {
-  background-image: url('../images/iStock_89629605_LARGE.jpg');
+  background-image: url('../images/iStock_large.jpg');
   background-position: 0px 0px;
   background-size: cover;
 }
 
 .bodyy {
   height: auto;
-  background-image: url('../images/iStock_89629605_LARGE.jpg');
+  background-image: url('../images/iStock_large.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }

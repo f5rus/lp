@@ -28,10 +28,39 @@
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.ico') }}">
     </head>
-    <body class="{% block body_class %}{% endblock %}">
-        {% block body %}{% endblock %}
+    <body class="body">
+        {% block body %}
+            <div class="sec_navi w-section">
+                <div class="w-container">
+                    <div class="nav_bar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+                        <div class="w-container">
+                            <a class="w-nav-brand" href="old-home.html"><img class="logo" src="{{ asset('images/bildschirmfoto_small.png') }}" width="150">
+                                <div class="language">Deutsch | <strong>English</strong>
+                                </div>
+                            </a>
+                            <nav class="w-nav-menu" role="navigation"><a class="navv w-nav-link" href="/create-user">Welcome, User</a><a class="logout navv w-nav-link" href="index.html">Logout</a>
+                            </nav>
+                            <div class="w-nav-button">
+                                <div class="w-icon-nav-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-section">
+                <div class="c w-container">
+                    <div class="w-row">
+                        <div class="w-col w-col-3">
+                            {% block left_side %}{% endblock %}
+                        </div>
+                        <div class="w-col w-col-9">
+                            {% block page_content %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
         <script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
-        {#<script src="{{ asset('js/webflow.js') }}"></script>#}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

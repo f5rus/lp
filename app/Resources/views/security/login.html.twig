@@ -1,28 +1,55 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Login{% endblock %}
-{% block body_class %}bodyy{% endblock %}
-{% block body %}
-    <div class="w-row">
-        <div class="w-col w-col-6"></div>
-        <div class="colwhite w-clearfix w-col w-col-6"><img class="top_logo" src="{{ asset('images/bildschirmfoto.png') }}">
-            <div class="logintxt">| Login to your account</div>
-            <div class="w-form wrapp">
-                {{ form_start(form) }}
-                    {{ form_label(form.username) }}
-                    {{ form_widget(form.username) }}
-                    {{ form_label(form.password) }}
-                    {{ form_widget(form.password) }}
-                    {{ form_widget(form.send) }}
-                    <a class="forget" href="forgot.html">Forgot Password?</a>
-                {{ form_end(form) }}
-                <div class="w-form-done">
-                    <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div class="w-form-fail">
-                    <div>Oops! Something went wrong while submitting the form</div>
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="ie7 lt-ie9 lt-ie8" lang="de"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8 lt-ie9" lang="de"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="de"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link href="{{ asset('components/normalize-css/normalize.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/lapixa-webflow.css') }}" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Oswald:300,400,700"]
+                }
+            });
+        </script>
+        <script type="text/javascript" src="{{ asset('js/modernizr.js') }}"></script>
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.ico') }}">
+    </head>
+    <body class="bodyy">
+        <div class="w-row">
+            <div class="w-col w-col-6"></div>
+            <div class="colwhite w-clearfix w-col w-col-6"><img class="top_logo" src="{{ asset('images/bildschirmfoto.png') }}">
+                <div class="logintxt">| Login to your account</div>
+                <div class="w-form wrapp">
+                    {{ form_start(form) }}
+                        {{ form_label(form.username) }}
+                        {{ form_widget(form.username) }}
+                        {{ form_label(form.password) }}
+                        {{ form_widget(form.password) }}
+                        {{ form_widget(form.send) }}
+                        <a class="forget" href="forgot.html">Forgot Password?</a>
+                    {{ form_end(form) }}
+                    <div class="w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-{% endblock%}
+        <script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
+    </body>
+</html>
