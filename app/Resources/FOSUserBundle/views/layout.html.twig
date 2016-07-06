@@ -11,6 +11,7 @@
         <link href="{{ asset('components/normalize-css/normalize.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/lapixa-webflow.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
         <script>
             WebFont.load({
@@ -19,7 +20,6 @@
                 }
             });
         </script>
-        <script type="text/javascript" src="{{ asset('js/modernizr.js') }}"></script>
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -32,6 +32,7 @@
             <div class="w-col w-col-6"></div>
             {% block fos_user_content %}{% endblock fos_user_content %}
         </div>
+        {% block modals %}{% endblock %}
         <script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>

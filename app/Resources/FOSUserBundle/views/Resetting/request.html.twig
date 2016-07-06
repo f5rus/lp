@@ -1,0 +1,26 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="nm_bg overlay_bg passss w-section w-hidden js-modal-forgot-password">
+    <div class="match_view password w-container">
+        <div class="div_content div_pass div_view w-clearfix">
+            <div class="hit">
+                <div class="header hiit">{{ 'resetting.request.header'|trans }}</div>
+            </div>
+            <div class="forgot_form w-form">
+                <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                    <label class="fieldlabel" for="email">{{ 'resetting.request.username'|trans }}</label>
+                    <input class="w-input" id="username" name="username" placeholder="Enter your Email address" required="required" type="email">
+                    <div class="teet">
+                        <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+                    </div>
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form</div>
+                </div>
+            </div><button class="confirm w-button js-modal-forgot-password-send-btn" type="submit" >{{ 'resetting.request.submit'|trans }}</button>
+        </div><button class="cancel_bt canel_pass w-button js-modal-forgot-password-cancel-btn" type="button">{{ 'resetting.request.cancel'|trans }}</button>
+    </div>
+</div>

@@ -16,7 +16,7 @@
                 <input class="txt w-input" placeholder="{{ 'security.login.password_placeholder'|trans }}" type="password" id="password" name="_password" required="required" />
 
                 <input class="signin w-button" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-                <a class="forget" href="forgot.html">{{ 'security.login.forgot_password'|trans  }}</a>
+                <button type="button" class="forget security-forgot_password-btn js-modal-forgot-password-btn">{{ 'security.login.forgot_password'|trans  }}</button>
             </form>
 
             <div class="w-form-done js-success-note">
@@ -28,6 +28,9 @@
         </div>
     </div>
 {% endblock fos_user_content %}
+{% block modals %}
+    {{ render(controller('FOSUserBundle:Resetting:request')) }}
+{% endblock %}
 {% block javascripts %}
     <script src="{{ asset('js/security.js') }}"></script>
 {% endblock %}
